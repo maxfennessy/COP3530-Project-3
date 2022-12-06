@@ -5,6 +5,7 @@
 #include <unordered_map>
 using namespace std;
 
+// checks if the similar words meet required conditions set
 vector<string> conditionChecker(vector<string> init, unordered_map<string, string> partOfSpeech, char beginsWith, char endsWith, int minLenght, int maxLength, int numOfSyllables, string pos) {
 	vector<string> ans;
 	for (int i = 0; i < init.size(); i++) {
