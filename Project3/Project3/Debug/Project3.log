@@ -1,4 +1,117 @@
 ﻿  MyForm.cpp
-C:\Users\henry\Desktop\Project3\Project3\MyForm.cpp(10,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Project3.vcxproj -> C:\Users\henry\Desktop\Project3\Debug\Project3.exe
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(6,26): error C2039: 'ComponentModel': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(6,40): error C2871: 'ComponentModel': a namespace with this name does not exist
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(8,26): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(8,26): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(8,35): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(8,40): error C2871: 'Forms': a namespace with this name does not exist
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(9,26): error C2039: 'Data': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(9,30): error C2871: 'Data': a namespace with this name does not exist
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(10,26): error C2039: 'Drawing': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(10,33): error C2871: 'Drawing': a namespace with this name does not exist
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(15,43): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(15,52): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(15,43): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(15,52): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(15,59): error C2039: 'Form': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(16,2): error C2504: 'Form': base class undefined
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,35): error C2039: 'Button': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,41): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,41): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(37,52): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(41,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(42,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,35): error C2039: 'TextBox': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,42): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(43,59): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(45,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(46,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(47,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(48,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(49,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(50,48): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,35): error C2039: 'Label': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,40): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,40): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(51,49): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,28): error C2039: 'Forms': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,19): error C3083: 'Windows': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,28): error C3083: 'Forms': the symbol to the left of a '::' must be a type
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,35): error C2039: 'TextBox': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,42): error C2143: syntax error: missing ';' before '^'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,42): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(52,59): error C2238: unexpected token(s) preceding ';'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(53,19): error C2039: 'Windows': is not a member of 'System'
+C:\Users\sglic\source\repos\COP3530-Project-3-main\Project3\Project3\MyForm.h(53,26): fatal error C1003: error count exceeds 100; stopping compilation
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  Generating Code...
