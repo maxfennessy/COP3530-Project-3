@@ -1,4 +1,13 @@
 #pragma once
+#include "Implementation.h"
+#include <msclr\marshal_cppstd.h>
+
+void MarshalString(System::String^ s, string& os) {
+	const char* chars =
+		(const char*)(System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(s)).ToPointer();
+	os = chars;
+	System::Runtime::InteropServices::Marshal::FreeHGlobal(System::IntPtr((void*)chars));
+}
 
 namespace Project3 {
 
@@ -94,7 +103,7 @@ namespace Project3 {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -103,6 +112,8 @@ namespace Project3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			makeGraph();
+
 			this->runButton = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -523,6 +534,72 @@ namespace Project3 {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		// CONDITION: condition(searchTermStr, partOfSpeech, beginsWithStr, endsWithStr, minLengthStr, maxLengthStr, numOfSyllablesStr, posStr)
+
+		std::string searchTermStr;
+		MarshalString(searchTermInput -> Text, searchTermStr);
+		std::string beginsWithStr;
+		MarshalString(searchTermInput->Text, beginsWithStr);
+		std::string endsWithStr;
+		MarshalString(searchTermInput->Text, endsWithStr);
+		int minLengthStr = System::Convert::ToInt16(minLengthInput);
+		int maxLengthStr = System::Convert::ToInt16(maxLengthInput);
+		int numOfSyllablesStr = System::Convert::ToInt16(numOfSyllablesInput);
+		std::string posStr;
+		MarshalString(searchTermInput->Text, posStr);
+
+		visited.insert(searchTermStr);
+		traverser.push(searchTermStr);
+		while (!traverser.empty() && closestValues.size() < 25) {
+			currItem = traverser.front();
+			traverser.pop();
+			if (dataStructurePick -> Text == "Graph") {
+				//Step 5.1: Graph BFS based on largest edges first
+				currNode = adjacencyList[currItem];
+				while (currNode != nullptr) {
+					if (condition(searchTermStr, partOfSpeech, beginsWithStr, endsWithStr, minLengthStr, maxLengthStr, numOfSyllablesStr, posStr)) {
+						closestValues.push_back(currNode->value);
+					}
+					if (visited.count(currNode->value) == 0 && adjacencyList.count(currNode->value) != 0) {
+						traverser.push(currNode->value);
+					}
+					visited.insert(currNode->value);
+					currNode = currNode->next;
+				}
+			}
+			else {
+				//Step 5.2: Popping heap's max values for highest values to meet condition
+				currHeap = heapMap[currItem];
+				while (!currHeap.isEmpty()) {
+					currVal = currHeap.popNode().value;
+					if (condition(searchTermStr, partOfSpeech, beginsWithStr, endsWithStr, minLengthStr, maxLengthStr, numOfSyllablesStr, posStr)) {
+						closestValues.push_back(currVal);
+					}
+					if (visited.count(currVal) == 0 && heapMap.count(currVal) != 0) {
+						traverser.push(currVal);
+					}
+					visited.insert(currVal);
+				}
+			}
+		}
+		//Step 5.3: Print closest values
+		term1 -> Text = gcnew String(closestValues.at(0).c_str());
+		term2 -> Text = gcnew String(closestValues.at(1).c_str());
+		term3 -> Text = gcnew String(closestValues.at(2).c_str());
+		term4 -> Text = gcnew String(closestValues.at(3).c_str());
+		term5 -> Text = gcnew String(closestValues.at(4).c_str());
+		term6 -> Text = gcnew String(closestValues.at(5).c_str());
+		term7 -> Text = gcnew String(closestValues.at(6).c_str());
+		term8 -> Text = gcnew String(closestValues.at(7).c_str());
+		term9 -> Text = gcnew String(closestValues.at(8).c_str());
+		term10 -> Text = gcnew String(closestValues.at(9).c_str());
+
+		//Step 5.4: Clean out queue, set and closest values
+		while (!traverser.empty()) {
+			traverser.pop();
+		}
+		visited.clear();
+		closestValues.clear();
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -583,5 +660,9 @@ namespace Project3 {
 	private: System::Void term10_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-};
+	};
 }
+
+
+
+
