@@ -11,12 +11,11 @@
 #include "nlohmann/json.hpp"
 using namespace std;
 using json = nlohmann::json;
-using std::cout;
 class Node {
 public:
     Node* next;
     Node* prev;
-    string value;
+    std::string value;
     float weight;
     Node() {
         next = nullptr;
@@ -24,7 +23,7 @@ public:
         weight = 0.0f;
         prev = nullptr;
     }
-    Node(string val, float wei) {
+    Node(std::string val, float wei) {
         next = nullptr;
         value = val;
         weight = wei;
@@ -33,14 +32,14 @@ public:
 };
 class Heap {
 public:
-    vector<Node> items;
-    string name;
+    std::vector<Node> items;
+    std::string name;
     unsigned int size;
     Heap() {
         name = "";
         size = 0;
     }
-    Heap(string word) {
+    Heap(std::string word) {
         name = word;
         size = 0;
     }
@@ -108,27 +107,24 @@ public:
         return items.size() == 0;
     }
 };
-bool condition(string word, unordered_map<string, string> partOfSpeech, string begin, string end, int minLength, int maxLength, int numSyllables, string partSpeech) {
+bool condition(std::string word, std::unordered_map<std::string, std::string> partOfSpeech, std::string begin, std::string end, int minLength, int maxLength, int numSyllables, std::string partSpeech) {
     if (word.substr(0, begin.length()) != begin) {
-        cout << "beginning" << endl;
         return false;
     }
     if (word.substr(word.length() - end.length(), end.length()) != end) {
-        cout << "ending" << endl;
         return false;
     }
     if (word.length() < minLength || word.length() > maxLength) {
-        cout << "length" << endl;
         return false;
     }
     if (numSyllables != -1) {
         int sylCount = 0;
-        string vowels = "aeiouy";
-        if (vowels.find(word.at(0)) != string::npos) {
+        std::string vowels = "aeiouy";
+        if (vowels.find(word.at(0)) != std::string::npos) {
             sylCount++;
         }
         for (int j = 1; j < word.length(); j++) {
-            if (vowels.find(word.at(j)) != string::npos && vowels.find(word.at(j - 1)) == string::npos) {
+            if (vowels.find(word.at(j)) != std::string::npos && vowels.find(word.at(j - 1)) == std::string::npos) {
                 sylCount++;
             }
         }
@@ -140,17 +136,14 @@ bool condition(string word, unordered_map<string, string> partOfSpeech, string b
         }
 
         if (sylCount != numSyllables) {
-            cout << "syl" << endl;
             return false;
         }
     }
     if (partSpeech != "") {
         if (partOfSpeech.count(word) == 0) {
-            cout << "Not in pos" << endl;
             return false;
         }
         if (partOfSpeech[word].substr(0, partSpeech.length()) != partSpeech) {
-            cout << "not right pos" << endl;
             return false;
         }
     }
@@ -159,17 +152,17 @@ bool condition(string word, unordered_map<string, string> partOfSpeech, string b
 int main()
 {
     //Step 1: Bring in all the data
-    ifstream inWords("words map.json");
+    std::ifstream inWords("words map.json");
     json data = json::parse(inWords);
-    cout << "Step 1 complete" << endl;
+    std::cout << "Step 1 complete" << std::endl;
     //Step 2: Declare variables for making graph and heap
-    string itemstring;
+    std::string itemstring;
     json item;
-    unordered_map<string, Node*> adjacencyList;
-    unordered_map<string, Heap> heapMap;
-    unordered_map<string, string> partOfSpeech;
+    std::unordered_map<std::string, Node*> adjacencyList;
+    std::unordered_map<std::string, Heap> heapMap;
+    std::unordered_map<std::string, std::string> partOfSpeech;
     Node* temp;
-    string keyNoSpace = "";
+    std::string keyNoSpace = "";
     size_t spaceIndex;
     //Step 3: Make adjacency list graph and max heap
     for (auto iter = data.begin(); iter != data.end(); iter++) {
@@ -182,7 +175,7 @@ int main()
             //cout << innerLoop.key() << endl << innerLoop.value() << endl;
             keyNoSpace = innerLoop.key();
             spaceIndex = keyNoSpace.find(" ");
-            while (spaceIndex != string::npos) {
+            while (spaceIndex != std::string::npos) {
                 keyNoSpace.erase(spaceIndex, 1);
                 spaceIndex = keyNoSpace.find(" ", spaceIndex);
             }
@@ -224,33 +217,87 @@ int main()
             }
         }
     }
-    cout << "Data made" << endl;
-    bool graph = false;
+    std::cout << "ready" << std::endl;
     //Step 4: Declare variables for search and conditions
-    string input;
-    unordered_set<string> visited;
-    queue<string> traverser;
-    vector<string> closestValues;
-    string currItem;
-    string currVal;
+    bool graph = false;
+    std::string input;
+    std::unordered_set<std::string> visited;
+    std::queue<std::string> traverser;
+    std::vector<std::string> closestValues;
+    std::string currItem;
+    std::string currVal;
     Node* currNode;
     Heap currHeap;
-    string begin = "";
-    string end = "";
+    std::string begin = "";
+    std::string end = "";
     int minLength = 0;
     int maxLength = 2000;
     int numSyl = -1;
-    string tempString = "";
-    string pos = "";
+    std::string tempString = "";
+    std::string pos = "";
     //Step 5: search for values based on data structure chosen
     while (true) {
-        //TO FIX: Operate off of GUI rather than command prompt input
-        cout << "What would you like to search?" << endl;
-        cin >> input;
-        //END of what needs fixing
+        std::cout << "Would you like to use the graph or heap? Type G for graph and H for heap" << std::endl;
+        std::cin >> input;
+        if (input == "G") {
+            graph = true;
+        }
+        else {
+            graph = false;
+        }
+        std::cout << "Would you like the word to begin with certain characters? Type them if so, and type 0 if not" << std::endl;
+        std::cin >> input;
+        if (input == "0") {
+            begin = "";
+        }
+        else {
+            begin = input;
+        }
+        std::cout << "Would you like the word to end with certain characters? Type them if so, and type 0 if not" << std::endl;
+        std::cin >> input;
+        if (input == "0") {
+            end = "";
+        }
+        else {
+            end = input;
+        }
+        std::cout << "Would you like a minimum length? Type it if so, and type 0 if not" << std::endl;
+        std::cin >> input;
+        if (input == "0") {
+            minLength = 0;
+        }
+        else {
+            minLength = stoi(input);
+        }
+        std::cout << "Would you like a maximum length? Type it if so, and type 0 if not" << std::endl;
+        std::cin >> input;
+        if (input == "0") {
+            maxLength = 2000;
+        }
+        else {
+            maxLength = stoi(input);
+        }
+        std::cout << "Would you like a number of syllables? Type it if so, and type 0 if not" << std::endl;
+        std::cin >> input;
+        if (input == "0") {
+            numSyl = -1;
+        }
+        else {
+            numSyl = stoi(input);
+        }
+        std::cout << "Would you like a certain part of speech? Type it if so, and type 0 if not" << std::endl;
+        std::cin >> input;
+        if (input == "0") {
+            pos = "";
+        }
+        else {
+            pos = input;
+        }
+        std::cout << "What would you like to search?" << std::endl;
+        std::cin >> input;
         visited.insert(input);
         traverser.push(input);
-        while (!traverser.empty() && closestValues.size() < 25) {
+        while (!traverser.empty() && closestValues.size() < 5) {
             currItem = traverser.front();
             traverser.pop();
             if (graph) {
@@ -284,7 +331,7 @@ int main()
         }
         //Step 5.3: Print closest values
         for (unsigned int i = 0; i < closestValues.size(); i++) {
-            cout << i + 1 << ": " << closestValues.at(i) << endl;
+            std::cout << i + 1 << ": " << closestValues.at(i) << endl;
         }
         //Step 5.4: Clean out queue, set and closest values
         while (!traverser.empty()) {
